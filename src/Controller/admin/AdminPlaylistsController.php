@@ -163,7 +163,7 @@ class AdminPlaylistsController extends AbstractController {
      * @param type $id
      * @return Response
      */
-    #[Route("admin/playlists/playlist/{id}", name:"admin.playlists.showone")]
+    #[Route("/admin/playlists/playlist/{id}", name:"admin.playlists.showone")]
     public function showOne($id): Response{
         $playlist = $this->playlistRepository->find($id);
         $playlistCategories = $this->categorieRepository->findAllForOnePlaylist($id);
