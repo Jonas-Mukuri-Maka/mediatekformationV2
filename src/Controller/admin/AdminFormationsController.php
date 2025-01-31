@@ -41,7 +41,7 @@ class AdminFormationsController extends AbstractController {
      * @Route("/admin", name="admin.formations")
      * @return Response
      */
-    #[Route('/admin', name:'admin.formations')]
+    #[Route('/admin/formations', name:'admin.formations')]
     public function index(): Response{
         $formations = $this->formationRepository->findAll();
         $categories = $this->categorieRepository->findAll();
@@ -61,7 +61,7 @@ class AdminFormationsController extends AbstractController {
      * @param Formation $formation
      * @return Response
      */
-    #[Route('/admin/suppr/{id}', name:'admin.formation.suppr')]
+    #[Route('/admin/formation/suppr/{id}', name:'admin.formation.suppr')]
     public function suppr(Formation $formation) {
         $this->formationRepository->remove($formation, true);
         return $this->redirectToRoute('admin.formations');
@@ -72,7 +72,7 @@ class AdminFormationsController extends AbstractController {
      * @param Request $request
      * @return Response
      */
-    #[Route('/admin/ajout', name:'admin.formation.ajout')]
+    #[Route('/admin/formation/ajout', name:'admin.formation.ajout')]
     public function ajout(Request $request) : Response{
         $formation = new Formation();
         $formFormation = $this->createForm(FormationType::class, $formation);
@@ -94,7 +94,7 @@ class AdminFormationsController extends AbstractController {
      * @param Request $request
      * @return Response
      */
-    #[Route('/admin/edit/{id}', name:'admin.formation.edit')]
+    #[Route('/admin/formation/edit/{id}', name:'admin.formation.edit')]
     public function edit(Formation $formation, Request $request): Response{
         $formFormation = $this->createForm(FormationType::class, $formation);
         
