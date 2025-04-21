@@ -1,86 +1,94 @@
 # Mediatekformation
-## Présentation
-Ce site, développé avec Symfony 6.4, permet d'accéder aux vidéos d'auto-formation proposées par une chaîne de médiathèques et qui sont aussi accessibles sur YouTube.<br> 
-Actuellement, seule la partie front office a été développée. Elle contient les fonctionnalités globales suivantes :<br>
-![img1](https://github.com/user-attachments/assets/9c5c503b-738d-40cf-ba53-36ba4c0209e8)
+## Présentation de l'application origine
+![link](https://github.com/CNED-SLAM/mediatekformation)
 ## Les différentes pages
-Voici les 5 pages correspondant aux différents cas d’utilisation.
-### Page 1 : l'accueil
-Cette page présente le fonctionnement du site et les 2 dernières vidéos mises en ligne.<br>
-La partie du haut contient une bannière (logo, nom et phrase présentant le but du site) et le menu permettant d'accéder aux 3 pages principales (Accueil, Formations, Playlists).<br>
-Le centre contient un texte de présentation avec, entre autres, les liens pour accéder aux 2 autres pages principales.<br>
-La partie basse contient les 2 dernières formations mises en ligne. Cliquer sur une image permet d'accéder à la page 3 de présentation de la formation.<br>
-Le bas de page contient un lien pour accéder à la page des CGU : ce lien est présent en bas de chaque page excepté la page des CGU.<br>
-![img2](https://github.com/user-attachments/assets/523b4233-3505-4b8c-9db0-5e7b72965bc6)
-### Page 2 : les formations
-Cette page présente les formations proposées en ligne (accessibles sur YouTube).<br>
-La partie haute est identique à la page d'accueil (bannière et menu).<br>
-La partie centrale contient un tableau composé de 5 colonnes :<br>
-•	La 1ère colonne ("formation") contient le titre de chaque formation.<br>
-•	La 2ème colonne ("playlist") contient le nom de la playlist dans laquelle chaque formation se trouve.<br>
-•	La 3ème colonne ("catégories") contient la ou les catégories concernées par chaque formation (langage…).<br>
-•	La 4ème colonne ("date") contient la date de parution de chaque formation.<br>
-•	LA 5ème contient la capture visible sur YouTube, pour chaque formation.<br>
-Au niveau des colonnes "formation", "playlist" et "date", 2 boutons permettent de trier les lignes en ordre croissant ("<") ou décroissant (">").<br>
-Au niveau des colonnes "formation" et "playlist", il est possible de filtrer les lignes en tapant un texte : seuls les lignes qui contiennent ce texte sont affichées. Si la zone est vide, le fait de cliquer sur "filtrer" permet de retrouver la liste complète.<br> 
-Au niveau de la catégorie, la sélection d'une catégorie dans le combo permet d'afficher uniquement les formations qui ont cette catégorie. Le fait de sélectionner la ligne vide du combo permet d'afficher à nouveau toutes les formations.<br>
-Par défaut la liste est triée sur la date par ordre décroissant (la formation la plus récente en premier).<br>
-Le fait de cliquer sur une miniature permet d'accéder à la troisième page contenant le détail de la formation.<br>
-![img3](https://github.com/user-attachments/assets/bc033cf9-41a5-4cad-a268-8abb400965c5)
-### Page 3 : détail d'une formation
-Cette page n'est pas accessible par le menu mais uniquement en cliquant sur une miniature dans la page "Formations" ou une image dans la page "Accueil".<br>
-La partie haute est identique à la page d'accueil (bannière et menu).<br>
-La partie centrale est séparée en 2 parties :<br>
-•	La partie gauche contient la vidéo qui peut être directement visible dans le site ou sur YouTube.<br>
-•	La partie droite contient la date de parution, le titre de la formation, le nom de la playlist, la liste des catégories et sa description détaillée.<br>
-![img4](https://github.com/user-attachments/assets/f41d05d8-5980-4dc4-9eb7-58d1c31b8a25)
-### Page 4 : les playlists
-Cette page présente les playlists.<br>
-La partie haute est identique à la page d'accueil (bannière et menu).<br>
-La partie centrale contient un tableau composé de 3 colonnes :<br>
-•	La 1ère colonne ("playlist") contient le nom de chaque playlist.<br>
-•	La 2ème colonne ("catégories") contient la ou les catégories concernées par chaque playlist (langage…).<br>
-•	La 3ème contient un bouton pour accéder à la page de présentation de la playlist.<br>
-Au niveau de la colonne "playlist", 2 boutons permettent de trier les lignes en ordre croissant ("<") ou décroissant (">"). Il est aussi possible de filtrer les lignes en tapant un texte : seuls les lignes qui contiennent ce texte sont affichées. Si la zone est vide, le fait de cliquer sur "filtrer" permet de retrouver la liste complète.<br> 
-Au niveau de la catégorie, la sélection d'une catégorie dans le combo permet d'afficher uniquement les playlists qui ont cette catégorie. Le fait de sélectionner la ligne vide du combo permet d'afficher à nouveau toutes les playlists.<br>
-Par défaut la liste est triée sur le nom de la playlist.<br>
-Cliquer sur le bouton "voir détail" d'une playlist permet d'accéder à la page 5 qui présente le détail de la playlist concernée.<br>
-![img5](https://github.com/user-attachments/assets/bbe8934f-8d4b-4da2-8216-60b96b726d8a)
-### Page 5 : détail d'une playlist
-Cette page n'est pas accessible par le menu mais uniquement en cliquant sur un bouton "voir détail" dans la page "Playlists".<br>
-La partie haute est identique à la page d'accueil (bannière et menu).<br>
-La partie centrale est séparée en 2 parties :<br>
-•	La partie gauche contient les informations de la playlist (titre, liste des catégories, description).<br>
-•	La partie droite contient la liste des formations contenues dans la playlist (miniature et titre) avec possibilité de cliquer sur une formation pour aller dans la page de la formation.<br>
-![img6](https://github.com/user-attachments/assets/f216a9e7-084a-4683-9b4e-cada5574a0e2)
+Voici toutes les pages du back office
+### Page Formations (Back Office)
+Cette page présente les formations proposées en ligne (accessibles sur YouTube) pour le back office. Elle est accessible en cliquant sur le bouton “Formations” sur le menu de navigation du back office.<br>
+La partie du haut contient une bannière (logo, nom du site et titre de la page) ainsi qu’un menu de navigation simplifié (seulement la page actuelle).<br>
+Le centre de la page est structuré comme la page “Formations” du front office, avec un affichage en colonne des différentes formations disponibles. Deux boutons sont ajoutés au-dessus de chaque formation :<br>
+• Le bouton “Éditer” permet de modifier les informations de la formation concernée (titre, description, vidéo, playlist et catégories).<br>
+• Le bouton “Supprimer” permet de supprimer la formation concernée. Lors du clic, un message de confirmation s’affiche, la suppression n'est effective qu’après validation.<br>
+Un bouton “Ajouter une nouvelle formation” est situé en haut de la colonne de gauche, et permet d’accéder à la page de création d’une nouvelle formation.<br>
+![image](https://github.com/user-attachments/assets/4f133945-a5fc-426b-9a09-ba91b253067c)
+## Page Ajout / Modification de Formation
+Cette page est accessible depuis la page Admin Formations, soit en cliquant sur “Ajouter une nouvelle formation”, soit sur “Éditer” pour modifier une formation existante.<br>
+Elle permet d’ajouter une nouvelle formation à la base de données ou de modifier une formation existante.<br>
+La partie centrale est divisée en trois zones :<br>
+• La partie gauche permet de saisir le titre de la formation, de sélectionner une playlist (une seule) ainsi que ses catégories (de 0 à plusieurs).<br>
+• La partie droite permet de choisir la date de publication (impossible de choisir une date future) et de saisir l’URL de la vidéo.<br>
+• La partie inférieure contient un champ de texte pour saisir la description complète de la formation.<br>
+Un bouton “Enregistrer” est situé en bas de la page pour valider l’opération.<br>
+Dans le cas d’une modification, les champs sont préremplis avec les données existantes de la formation, et le titre de la page passe de “Nouvelle Formation :” à “Modification de Formation :”.<br>
+![image](https://github.com/user-attachments/assets/ab18bf42-7ace-4a4e-a666-d2de239a7cae)
+
+### Page Playlists (Back Office)
+Cette page permet la gestion des playlists, c’est-à-dire des regroupements de formations, depuis le back office. Elle est accessible via le menu de navigation du back office en cliquant sur “Playlists”.<br>
+La bannière et le menu en haut de page sont similaires aux autres pages du back office. Le menu contient uniquement les pages réservées à l’administration.<br>
+Un bouton “Ajouter une nouvelle playlist” est placé en haut de la colonne dédiée aux playlists, et permet de créer une nouvelle entrée en renseignant un nom et une description.<br>
+La partie centrale reprend la présentation de la page Playlists du front office, à ceci près qu'elle inclut deux actions supplémentaires visibles au-dessus de chaque carte de playlist :<br>
+• Le bouton “Éditer” permet de modifier les informations de la playlist (nom et description).<br>
+• Le bouton “Supprimer” n’est disponible que pour les playlists ne contenant aucune formation. Lorsqu’il est visible et activé, un message de confirmation s’affiche avant suppression définitive.<br>
+![image](https://github.com/user-attachments/assets/ffd6ead8-98d2-4534-8f2a-6fc1d557c694)
+## Page de Modification d’une Playlist
+Accessible en cliquant sur “Éditer” depuis la page des playlists, cette page permet de modifier les détails d’une playlist existante.<br>
+La structure de la page est divisée en deux colonnes :<br>
+• À gauche, l’utilisateur peut modifier le nom de la playlist ainsi que sa description.<br>
+• À droite, la liste des formations associées à cette playlist est affichée, avec leurs titres respectifs à titre d’information (non modifiables depuis cette page).<br>
+Un bouton “Enregistrer” est présent en bas de page pour valider les modifications et les enregistrer dans la base de données.<br>
+![image](https://github.com/user-attachments/assets/af9473fa-921f-4515-819d-c99a2fe94930)
+## Page d’Ajout d’une Playlist
+Cette page s’ouvre en cliquant sur le bouton “Ajouter une nouvelle playlist” dans la section Playlists du back office.<br>
+Elle permet la création d’une nouvelle playlist. L’utilisateur y saisit un nom ainsi qu’une description pour la playlist à créer.<br>
+Un bouton “Enregistrer” situé en bas de la page permet de finaliser l’ajout et d’enregistrer la nouvelle playlist dans la base de données.<br>
+![image](https://github.com/user-attachments/assets/4b0c7a7f-8bba-4347-b490-58c11b18de85)
+
+### Page Catégories (Back Office)
+Cette page permet de consulter et gérer les catégories de formations disponibles dans la base de données. Elle est accessible via le bouton “Catégories” dans le menu de navigation du back office.<br>
+La partie centrale de la page affiche un tableau structuré en deux colonnes :<br>
+• La colonne “Catégories” liste les noms de toutes les catégories existantes,<br>
+• La colonne “Actions” permet la suppression d’une catégorie donnée, uniquement si celle-ci n’est associée à aucune formation.<br>
+Au-dessus du tableau, une zone de saisie accompagnée d’un bouton “Ajouter” permet de créer une nouvelle catégorie. Le nom renseigné est enregistré dans la base de données, à condition qu’il ne soit pas déjà utilisé.<br>
+![image](https://github.com/user-attachments/assets/f4c7a792-89dd-4be8-94f0-955d94183672)
+
+### Page de Connexion (Back Office)
+Cette page permet aux utilisateurs autorisés d'accéder à l'interface d’administration du site. Elle est automatiquement affichée lorsqu’un utilisateur tente d’accéder à une page du back office sans être connecté.<br>
+La page est composée d’un formulaire de connexion simple situé au centre de l’écran, contenant les champs suivants :<br>
+• Un champ “Nom d'utilisateur” pour saisir l’identifiant,<br>
+• Un champ “Mot de passe” pour l’authentification sécurisée.<br>
+Un bouton “Connexion” permet de valider les informations saisies. En cas d’erreur (identifiants incorrects), un message d’alerte s’affiche pour en informer l’utilisateur.<br>
+Une fois la connexion réussie, l’utilisateur est redirigé automatiquement vers la page principale du back office (par défaut, la page Formations).<br>
+![image](https://github.com/user-attachments/assets/eec3613b-093d-4b22-aa92-aa3801478400)
+
+
 ## La base de données
 La base de données exploitée par le site est au format MySQL.
 ### Schéma conceptuel de données
 Voici le schéma correspondant à la BDD.<br>
-![img7](https://github.com/user-attachments/assets/f3eca694-bf96-4f6f-811e-9d11a7925e9e)
+![HfvUBfhcN4](https://github.com/user-attachments/assets/2200ca4b-caf9-4f1a-920d-35abdd2e219d)
 <br>video_id contient le code YouTube de la vidéo, qui permet ensuite de lancer la vidéo à l'adresse suivante :<br>
 https://www.youtube.com/embed/<<<video_id>>>
 ### Relations issues du schéma
-<code><strong>formation (id, published_at, title, video_id, description, playlist_id)</strong>
-id : clé primaire
-playlist_id : clé étrangère en ref. à id de playlist
-<strong>playlist (id, name, description)</strong>
-id : clé primaire
-<strong>categorie (id, name)</strong>
-id : clé primaire
-<strong>formation_categorie (id_formation, id_categorie)</strong>
-id_formation, id_categorie : clé primaire
-id_formation : clé étrangère en ref. à id de formation
-id_categorie : clé étrangère en ref. à id de categorie</code>
-
-Remarques : 
-Les clés primaires des entités sont en auto-incrémentation.<br>
-Le chemin des images (des 2 tailles) n'est pas mémorisé dans la BDD car il peut être fabriqué de la façon suivante :<br>
-"https://i.ytimg.com/vi/" suivi de, soit "/default.jpg" (pour la miniature), soit "/hqdefault.jpg" (pour l'image plus grande de la page d'accueil).
-## Test de l'application en local
-- Vérifier que Composer, Git et Wamserver (ou équivalent) sont installés sur l'ordinateur.
-- Télécharger le code et le dézipper dans www de Wampserver (ou dossier équivalent) puis renommer le dossier en "mediatekformation".<br>
-- Ouvrir une fenêtre de commandes en mode admin, se positionner dans le dossier du projet et taper "composer install" pour reconstituer le dossier vendor.<br>
-- Dans phpMyAdmin, se connecter à MySQL en root sans mot de passe et créer la BDD 'mediatekformation'.<br>
-- Récupérer le fichier mediatekformation.sql en racine du projet et l'utiliser pour remplir la BDD (si vous voulez mettre un login/pwd d'accès, il faut créer un utilisateur, lui donner les droits sur la BDD et il faut le préciser dans le fichier ".env" en racine du projet).<br>
-- De préférence, ouvrir l'application dans un IDE professionnel. L'adresse pour la lancer est : http://localhost/mediatekformation/public/index.php<br>
+<code>
+<strong>formation (id, published_at, title, video_id, description, playlist_id)</strong><br>
+id : clé primaire<br>
+playlist_id : clé étrangère en référence à id de playlist<br><br>
+<strong>playlist (id, name, description)</strong><br>
+id : clé primaire<br><br>
+<strong>categorie (id, name)</strong><br>
+id : clé primaire<br><br>
+<strong>formation_categorie (formation_id, categorie_id)</strong><br>
+formation_id, categorie_id : clé primaire<br>
+formation_id : clé étrangère en référence à id de formation<br>
+categorie_id : clé étrangère en référence à id de categorie<br><br>
+<strong>user (id, username, roles, password)</strong><br>
+id : clé primaire<br>
+username : unique<br><br>
+<strong>doctrine_migration_versions (version, executed_at, execution_time)</strong><br>
+version : clé primaire<br><br>
+<strong>messenger_messages (id, body, headers, queue_name, created_at, available_at, delivered_at)</strong><br>
+id : clé primaire<br>
+queue_name, available_at, delivered_at : indexés<br>
+</code>
+## Lien vers le site de MediatekFormation
+https://mediatekformation86.worldlite.fr/
